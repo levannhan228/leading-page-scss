@@ -1,0 +1,23 @@
+{
+  "name": "web_shop",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "sasstocss": "node-sass sass/main.scss css/style.css -w"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/levannhan228/web_shop.git"
+  },
+  "author": "van_nhan",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/levannhan228/web_shop/issues"
+  },
+  "homepage": "https://github.com/levannhan228/web_shop#readme",
+  "dependencies": {},
+  "devDependencies": {
+    "node-sass": "^4.14.1"
+  }
+}
