@@ -1,0 +1,24 @@
+.header{
+  background-image: linear-gradient(to right bottom, rgba($color-primary-light, .5), rgba($color-primary-dark, .5)),
+  url('../img/background1.jpg');
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  height: 100vh;
+  clip-path: ellipse(75% 61% at 51% 25%);
+  &__text-box{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
+  &__logo{
+    height: 70px;
+  }
+  &__logo-box{
+    position: absolute;
+    top: 30px;
+    left: 30px;
+  }
+}
