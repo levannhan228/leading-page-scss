@@ -47,7 +47,15 @@
     animation-fill-mode: backwards;
   }
   &--blue{
+    background-color: $color-primary;
+    color: $color-white;
     margin-top: 20rem;
+    &::after{
+      background-color: $color-primary;
+    }
+    &:hover{
+      color: $color-white;
+    }
   }
 }
 

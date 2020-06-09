@@ -1,0 +1,41 @@
+.testimonials {
+  width: 60%;
+  padding: 2rem 5rem;
+  margin: 0 auto;
+  margin-bottom: 2rem;
+  box-shadow: 0 0 5rem rgba($color-black, .15);
+  font-size: $default-font-size;
+  border-radius: 100rem;
+  background-color: rgba($color-white, .1);
+  padding-left: 9rem;
+  &__shape{
+    width: 12rem;
+    height: 12rem;
+    background-color: orangered;
+    float: left;
+    clip-path: circle(50% at 50% 50%);
+    transform: translateX(-3rem);
+    margin-left: -2rem;
+    margin-top: 1rem;
+    shape-outside: circle(40% at 50% 50%);
+    position: relative;
+  }
+  &__text{
+    margin-top: 2rem;
+  }
+  &__img{
+    width: 100%;
+    transform: translateY(-2rem);
+  }
+  &__caption{
+    position: absolute;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%,20%);
+    color: $color-white;
+    text-transform: uppercase;
+    font-size: 1.7rem;
+    text-align: center;
+    opacity: 0;
+  }
+}
