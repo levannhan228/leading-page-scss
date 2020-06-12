@@ -1,7 +1,7 @@
 .section-about{
   background-color: $color-grey-light;
-  margin-top: -15rem;
-  padding-top: 15rem;
+  margin-top: -25rem;
+  padding-top: 25rem;
   padding-left: 10%;
   padding-bottom: 15rem;
 }
@@ -26,4 +26,10 @@
   position: relative;
   padding: 5rem 0;
   
+}
+
+.section-enroll{
+  padding: 10rem 12rem;
+  margin-top: -2rem;
+  background-image: linear-gradient(to right bottom, $color-primary-light, $color-primary-dark);
 }
