@@ -1,4 +1,8 @@
 .section-about{
+  @include respond(phone){
+    padding: 30rem 0;
+    margin-top: -40rem;
+  }
   background-color: $color-grey-light;
   margin-top: -25rem;
   padding-top: 25rem;

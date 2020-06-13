@@ -34,6 +34,15 @@
 
 html {
   font-size: 62.5%; }
+  @media (max-width: 1200px) {
+    html {
+      font-size: 56.25%; } }
+  @media (max-width: 900px) {
+    html {
+      font-size: 50%; } }
+  @media (min-width: 1800px) {
+    html {
+      font-size: 75%; } }
 
 body {
   box-sizing: border-box; }
@@ -43,8 +52,7 @@ body {
   font-weight: 400;
   font-size: 1.6rem !important;
   line-height: 1.7;
-  color: #777777;
-  padding: 30px; }
+  color: #777777; }
 
 .heading-primary {
   color: #fff;
@@ -57,12 +65,19 @@ body {
     font-weight: 400;
     letter-spacing: 15px;
     animation: moveInLeft 1s ease-out; }
+    @media (max-width: 600px) {
+      .heading-primary--main {
+        letter-spacing: 1rem;
+        font-size: 5rem; } }
   .heading-primary--sub {
     display: block;
     font-size: 2rem;
     font-weight: 700;
     letter-spacing: 18px;
     animation: moveInRight 1s ease-out; }
+    @media (max-width: 600px) {
+      .heading-primary--sub {
+        letter-spacing: .5rem; } }
 
 .heading-secondary {
   font-size: 3.5rem;
@@ -75,6 +90,12 @@ body {
   color: transparent;
   -webkit-background-clip: text;
   transition: all 0.2s; }
+  @media (max-width: 900px) {
+    .heading-secondary {
+      font-size: 3rem; } }
+  @media (max-width: 600px) {
+    .heading-secondary {
+      font-size: 2.5rem; } }
   .heading-secondary:hover {
     transform: skewY(5deg) scale(1.1);
     text-shadow: 0.5rem 1rem 2rem rgba(0, 0, 0, 0.2); }
@@ -191,6 +212,10 @@ body {
   padding-top: 25rem;
   padding-left: 10%;
   padding-bottom: 15rem; }
+  @media (max-width: 600px) {
+    .section-about {
+      padding: 30rem 0;
+      margin-top: -40rem; } }
 
 .section-skills {
   background-image: linear-gradient(to right bottom, rgba(142, 158, 207, 0.5), rgba(28, 62, 255, 0.5)), url("../../img/background2.png");
@@ -236,15 +261,37 @@ body {
     z-index: 10;
     outline-offset: .5rem;
     transition: all .2s; }
+    @media (max-width: 900px) {
+      .composition__photo {
+        float: left;
+        position: relative;
+        width: 33.33333%;
+        box-shadow: 0 1.5rem 3rem rgba(0, 0, 0, 0.2);
+        margin-bottom: 3rem; } }
     .composition__photo--p1 {
       left: 0;
       top: -2rem; }
+      @media (max-width: 900px) {
+        .composition__photo--p1 {
+          top: 0;
+          transform: scale(1.1); } }
     .composition__photo--p2 {
       left: 20rem;
       top: 2rem; }
+      @media (max-width: 900px) {
+        .composition__photo--p2 {
+          top: -1rem;
+          transform: scale(1.2);
+          right: 0;
+          z-index: 12; } }
     .composition__photo--p3 {
       left: 10%;
       top: 10rem; }
+      @media (max-width: 900px) {
+        .composition__photo--p3 {
+          top: 0;
+          transform: scale(1.1);
+          left: 0; } }
     .composition__photo:hover .composition__photo__photo:not(:hover) {
       transform: scale(0.9); }
     .composition__photo:hover {
@@ -626,6 +673,12 @@ body {
   text-align: center;
   box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.15); }
 
+.navigation__button:hover .navigation__icon::before {
+  top: -1rem; }
+
+.navigation__button:hover .navigation__icon::after {
+  top: 1rem; }
+
 .navigation__background {
   background-image: radial-gradient(#5a73fc, #1c3eff);
   height: 6rem;
@@ -681,3 +734,32 @@ body {
   background-position: 100%;
   color: #5a73fc;
   transform: translateX(1rem); }
+
+.navigation__icon {
+  position: relative;
+  margin-top: 3.2rem; }
+  .navigation__icon, .navigation__icon::before, .navigation__icon::after {
+    width: 3.5rem;
+    height: .3rem;
+    background-color: #333;
+    display: inline-block; }
+  .navigation__icon::before, .navigation__icon::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    transition: all .2s; }
+  .navigation__icon::before {
+    top: -.8rem; }
+  .navigation__icon::after {
+    top: .8rem; }
+
+.navigation__checkbox:checked + .navigation__button .navigation__icon {
+  background-color: transparent; }
+
+.navigation__checkbox:checked + .navigation__button .navigation__icon::before {
+  top: 0;
+  transform: rotate(135deg); }
+
+.navigation__checkbox:checked + .navigation__button .navigation__icon::after {
+  top: 0;
+  transform: rotate(-135deg); }
